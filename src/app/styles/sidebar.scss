@@ -1,0 +1,92 @@
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    .logo {
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+    .board-list {
+        p {
+            margin-bottom: 25px;
+            padding-left: 30px;
+            color: #828FA3;
+            text-transform: uppercase;
+        }
+        .board-names {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            a {
+                text-decoration: none;
+                color: #828FA3;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                transition: 0.5s;
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+                &:hover {
+                    color: #fff;
+                    background: #635FC7;
+                }
+                h3 {
+                    font-size: 16px;
+                    padding-left: 30px;
+                    display: flex;
+                    gap: 10px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .side-bar-bottom {
+        padding: 20px;
+        .theme-changer {
+            height: 50px;
+            background: #efeded;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 5px;
+            p {
+                margin: 0;
+                color: #828FA3;
+                text-transform: capitalize;
+            }
+            .switch {
+                height: 30px;
+                width: 60px;
+                border-radius: 30px;
+                background: #635FC7;
+                display: flex;
+                align-items: center;
+                padding: 0 3px;
+                justify-content: flex-start;
+                &:hover {
+                    cursor: pointer;
+                }
+                .slider {
+                    background: #fff;
+                    height: 25px;
+                    width: 25px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .hide-sidebar {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            p {
+                margin: 0;
+                color: #828FA3;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

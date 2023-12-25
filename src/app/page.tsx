@@ -1,9 +1,11 @@
+//Plugins
+import './styles/plugins/bootstrap.css'
+
 //Components
-import Sidebar from "./Compoents/sidebar"
+import Sidebar from "./compoents/sidebar/sidebar"
 
 //Styles
-import './Styles/bootstrap.css'
-import './Styles/sidebar.scss'
+import './styles/sidebar.scss'
 
 export default function Home() {
   return (
