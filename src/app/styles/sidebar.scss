@@ -3,6 +3,10 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    background: $white;
+    .side-bar-top {
+        padding-right: 10px;
+    }
     .logo {
         padding: 20px;
         margin-bottom: 25px;
@@ -30,8 +34,8 @@
                 padding-left: 30px;
                 gap: 10px;
                 &:hover {
-                    color: #fff;
-                    background: #635FC7;
+                    color: $white;
+                    background: $main-color;
                     cursor: pointer;
                     img {
                         filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(16deg) brightness(100%) contrast(104%);
@@ -66,7 +70,7 @@
                 height: 30px;
                 width: 60px;
                 border-radius: 30px;
-                background: #635FC7;
+                background: $main-color;
                 display: flex;
                 align-items: center;
                 padding: 0 3px;
@@ -75,7 +79,7 @@
                     cursor: pointer;
                 }
                 .slider {
-                    background: #fff;
+                    background: $white;
                     height: 25px;
                     width: 25px;
                     border-radius: 50%;

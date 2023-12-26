@@ -1,20 +1,17 @@
 "use client";
 import { useState } from "react"
+import 'bootstrap/scss/bootstrap.scss';
 
 //Components
 import Sidebar from "./compoents/sidebar/sidebar"
 import Board from './compoents/board/board'
+import data from './compoents/data.json';
 
 //Styles
-import './styles/sidebar.scss'
-
-//Plugins
-import './styles/plugins/bootstrap.css'
+import './styles/all.scss'
 
 export default function Home() {
-  const boardNames = [];
-
-  const [boardName, setBoardName] = useState('New Board Name');
+  const [boardName, setBoardName] = useState(data.boards[0].name);
 
   function setBName (newName:any) {
     setBoardName(newName);

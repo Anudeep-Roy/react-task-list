@@ -1,0 +1,38 @@
+.page-header {
+    height: 100px;
+    background: $white;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $border;
+    h3 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .header-menu {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        a {
+            padding: 15px;
+            background: $main-color;
+            color: $white;
+            font-weight: bold;
+            border-radius: 30px;
+            text-transform: capitalize;
+            &:hover {
+                background: $button-hover;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+        img {
+            padding: 10px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

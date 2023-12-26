@@ -1,5 +1,7 @@
+import PageHeader from "./pageHeader"
+
 export default function Board ({boardName}:any) {
     return (
-        <p>{boardName}</p>
+        <PageHeader boardName={boardName}/>
     )
 }
