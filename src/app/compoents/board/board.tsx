@@ -1,7 +1,11 @@
 import PageHeader from "./pageHeader"
+import Dashboard from "./dashboard"
 
-export default function Board ({boardName}:any) {
+export default function Board ({boardName, currentIndex}:any) {
     return (
-        <PageHeader boardName={boardName}/>
+        <>
+            <PageHeader boardName={boardName}/>
+            <Dashboard boardName={boardName} currentIndex={currentIndex}/>
+        </>
     )
 }

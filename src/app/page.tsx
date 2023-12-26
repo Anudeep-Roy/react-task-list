@@ -12,18 +12,20 @@ import './styles/all.scss'
 
 export default function Home() {
   const [boardName, setBoardName] = useState(data.boards[0].name);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   function setBName (newName:any) {
     setBoardName(newName);
+    setCurrentIndex(data.boards.findIndex(title=> title.name == newName));
   }
 
   return (
-    <div className="row">
-      <div className="col-2">
+    <div className="main-row">
+      <div className="sidebar-col">
         <Sidebar setBName={setBName}/>
       </div>
-      <div className="col-10">
-        <Board boardName={boardName}/>
+      <div className="board-col">
+        <Board boardName={boardName} currentIndex={currentIndex}/>
       </div>
     </div>
   )

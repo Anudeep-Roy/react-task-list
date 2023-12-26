@@ -8,3 +8,14 @@ $border: #E4EBFA;
 body {
     background: #F4F7FD;
 }
+.main-row {
+    display: flex;
+    .sidebar-col {
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+    .board-col {
+        flex-basis: 0;
+        flex-grow: 5;
+    }
+}
