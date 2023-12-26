@@ -27,13 +27,17 @@
                 transition: 0.5s;
                 border-top-right-radius: 30px;
                 border-bottom-right-radius: 30px;
+                padding-left: 30px;
+                gap: 10px;
                 &:hover {
                     color: #fff;
                     background: #635FC7;
+                    img {
+                        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(16deg) brightness(100%) contrast(104%);
+                    }
                 }
                 h3 {
                     font-size: 16px;
-                    padding-left: 30px;
                     display: flex;
                     gap: 10px;
                     margin: 0;
