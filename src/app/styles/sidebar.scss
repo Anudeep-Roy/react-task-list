@@ -32,6 +32,7 @@
                 &:hover {
                     color: #fff;
                     background: #635FC7;
+                    cursor: pointer;
                     img {
                         filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(16deg) brightness(100%) contrast(104%);
                     }
