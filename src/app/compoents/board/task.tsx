@@ -1,7 +1,7 @@
-export default function Task ({currentTask, serial}:any) {
+export default function Task ({work, sequence}:any) {
     return (
         <>
-            <p key={serial}>{currentTask}</p>
+            <p key={sequence}>{work}</p>
         </>
     )
 }

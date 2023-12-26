@@ -5,7 +5,7 @@ export default function Board ({boardName, currentIndex}:any) {
     return (
         <>
             <PageHeader boardName={boardName}/>
-            <Dashboard boardName={boardName} currentIndex={currentIndex}/>
+            <Dashboard currentIndex={currentIndex}/>
         </>
     )
 }
