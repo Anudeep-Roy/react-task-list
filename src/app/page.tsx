@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react"
-import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 //Components
 import Sidebar from "./compoents/sidebar/sidebar"
