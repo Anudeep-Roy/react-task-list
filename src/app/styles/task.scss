@@ -8,6 +8,9 @@
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    &:hover {
+        cursor: pointer;
+    }
     h4 {
         font-size: 15px;
         font-weight: bold;
