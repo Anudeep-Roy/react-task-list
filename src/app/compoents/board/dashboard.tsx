@@ -8,17 +8,23 @@ export default function Dashboard ({currentIndex}:any) {
     const [currentWork, setCurrentWork] = useState('');
     const [currentFin, setCurrentFin] = useState('');
     const [currentSub, setCurrentSub] = useState('');
+    const [modalVisible, setModalVisible] = useState(false);
     
     function showModal (work:any, fin:any, sub:any) {
         setCurrentWork(work);
         setCurrentFin(fin);
         setCurrentSub(sub);
+        setModalVisible(true);
+    }
+
+    function closeModal () {
+        setModalVisible(false);
     }
 
     return (
         <div className='dashboard'>
             <div className='row'>
-                <TaskModal currentWork={currentWork} currentFin={currentFin} currentSub={currentSub}/>
+                <TaskModal currentWork={currentWork} currentFin={currentFin} currentSub={currentSub} modalVisible={modalVisible} closeModal={closeModal}/>
                 {data.boards[currentIndex].columns.map((task, i)=>
                     <div className="col-3" key={`task_${i}`}>
                         <h4 key={`task_heading${i}`}>{task.name}</h4>
