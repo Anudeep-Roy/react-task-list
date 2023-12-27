@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div className="main-row">
       <div className="sidebar-col">
-        <Sidebar setBName={setBName}/>
+        <Sidebar setBName={setBName} currentIndex={currentIndex}/>
       </div>
       <div className="board-col">
         <Board boardName={boardName} currentIndex={currentIndex}/>
