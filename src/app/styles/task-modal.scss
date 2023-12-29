@@ -1,0 +1,15 @@
+.task-modal {
+    .modal-header {
+        border-bottom: none;
+        h5 {
+            color: $task;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+    .modal-body {
+        color: $subtask;
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
