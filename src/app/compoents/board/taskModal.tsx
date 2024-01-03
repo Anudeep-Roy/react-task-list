@@ -1,4 +1,5 @@
 import data from '../data.json';
+import Subtasks from './subTasks';
 
 export default function TaskModal ({currentWork, currentFin, currentSub, modalVisible, closeModal, currentIndex, subIndex, taskIndex}:any) {
     let isVisible = modalVisible? 'show':'';
@@ -12,11 +13,12 @@ export default function TaskModal ({currentWork, currentFin, currentSub, modalVi
                     </div>
                     <div className="modal-body">
                         <p>Subtasks ({currentFin} of {currentSub})</p>
-                        <ul>
+                        <div className='sub-container'>
+                            <p>{data.boards[currentIndex].columns[subIndex].tasks[taskIndex].description}</p>
                             {data.boards[currentIndex].columns[subIndex].tasks[taskIndex].subtasks.map((title, i)=>
-                                <li key={i}>{title.title}</li>
+                                <Subtasks key={i} isCompleted={title.isCompleted} sub={title.title}/>
                             )}
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </div>

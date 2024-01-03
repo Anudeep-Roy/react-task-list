@@ -11,5 +11,19 @@
         color: $subtask;
         font-size: 12px;
         font-weight: bold;
+        .sub-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .form-check {
+                background: $lightgrey;
+                padding: 15px 30px;
+                display: flex;
+                gap: 10px;
+                input[type="checkbox"]:checked + label {
+                    text-decoration: line-through;
+                }
+            }
+        }
     }
 }
