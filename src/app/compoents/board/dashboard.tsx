@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import data from '../data.json';
 import Task from './task';
 import TaskModal from './taskModal';
 
-export default function Dashboard ({currentIndex}:any) {
+export default function Dashboard ({currentIndex, data}:any) {
 
     const [currentWork, setCurrentWork] = useState('');
     const [currentFin, setCurrentFin] = useState('');
@@ -38,17 +37,17 @@ export default function Dashboard ({currentIndex}:any) {
                     subIndex={subIndex}
                     taskIndex={taskIndex}
                 />
-                {data.boards[currentIndex].columns.map((task, i)=>
+                {data.boards[currentIndex].columns.map((task:any, i:number)=>
                     <div className="col-3" key={`task_${i}`}>
                         <h4 key={`task_heading${i}`}>{task.name}</h4>
-                            {task.tasks.map((work, j)=>
+                            {task.tasks.map((work:any, j:any)=>
                                 <Task 
                                 currentIndex={currentIndex}
                                 subIndex = {i}
                                 key={`task_work_${j}`}
                                 work={work.title} 
                                 sub={work.subtasks.length} 
-                                fin = {work.subtasks.filter(item=>item.isCompleted == true).length}
+                                fin = {work.subtasks.filter((item:any)=>item.isCompleted == true).length}
                                 showModal={showModal}
                                 />
                             )}

@@ -7,5 +7,6 @@ export default function Task ({currentIndex, subIndex, work, sub, fin, showModal
             <h4>{work}</h4>
             <p>{fin} of {sub} subtasks</p>
         </div>
+        
     )
 }

@@ -1,10 +1,8 @@
-import data from '../data.json';
-
-export default function BoardName ({setBName, currentIndex}:any) {
+export default function BoardName ({setBName, currentIndex, data}:any) {
     
     return (
         <div className="board-name">
-           {data.boards.map((board, index)=>(
+           {data.boards.map((board:any, index:number)=>(
                 <a className={currentIndex == index ? 'active' : ''} key={index} onClick={()=>setBName(board.name)}>
                     <img src='/assets/icon-board.svg'/>
                     <h3>{board.name}</h3>

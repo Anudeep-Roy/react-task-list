@@ -2,8 +2,8 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Components
-@import './sidebar.scss';
-@import './page-header.scss';
-@import './dashboard.scss';
-@import './task.scss';
-@import './task-modal.scss';
+@import './components/dashboard.scss';
+@import './components/page-header.scss';
+@import './components/sidebar.scss';
+@import './components/task-modal.scss';
+@import './components/task.scss';
