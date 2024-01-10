@@ -16,7 +16,7 @@ export default function TaskModal ({currentWork, currentFin, currentSub, modalVi
                         <div className='sub-container'>
                             <p>{data.boards[currentIndex].columns[subIndex].tasks[taskIndex].description}</p>
                             {data.boards[currentIndex].columns[subIndex].tasks[taskIndex].subtasks.map((title, i)=>
-                                <Subtasks key={i} isCompleted={title.isCompleted} sub={title.title}/>
+                                <Subtasks data={data} currentIndex={currentIndex} subIndex={subIndex} taskIndex={taskIndex} key={i} isCompleted={title.isCompleted} sub={title.title}/>
                             )}
                         </div>
                     </div>
